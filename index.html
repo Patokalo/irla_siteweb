@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>IRLA - Institut de Recherche en Langues Africaines</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+              darkMode: 'class', // Important pour activer le dark mode par classe
+              theme: {
+                extend: {
+                  colors: {
+                    green: {
+                      800: '#006400', // Ton vert IRLA
+                    }
+                            }
+                }
+              }
+            }
+        </script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+            defer></script>
+        <style>
+    .fade-in-up {
+      animation: fadeInUp 1s ease-out both;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+    </head>
+    <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+
+        <!-- Top bar -->
+
+        <div class="bg-blue-900 text-white text-sm">
+            <div
+                class="max-w-7xl mx-auto px-4 py-2 flex flex-col md:flex-row justify-between items-center gap-2">
+                <!-- Contact -->
+                <div class="flex items-center gap-4">
+                    <span><i class="fas fa-phone-alt mr-1 text-xs"></i> (+224)
+                        123 45 67 89</span>
+                    <span><i class="fas fa-envelope mr-1 text-xs"></i>
+                        contact@irla.gn</span>
+                </div>
+                <!-- Réseaux sociaux -->
+                <div class="flex items-center gap-4">
+                    <a href="#" class="hover:text-gray-300"
+                        aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-gray-300"
+                        aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-gray-300"
+                        aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="hover:text-gray-300"
+                        aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <header
+            class="bg-white shadow sticky top-0 z-50 dark:bg-gray-900 dark:text-white">
+            <div
+                class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+                <h1 class="text-2xl font-bold text-blue-700">IRLA</h1>
+                <nav>
+                    <ul
+                        class="flex flex-wrap justify-center gap-6 text-sm font-medium text-gray-700 dark:text-white">
+                        <li><a href="#"
+                                class="hover:text-blue-600 transition">Accueil</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition">À
+                                propos</a></li>
+                        <li><a href="#"
+                                class="hover:text-blue-600 transition">Projet</a></li>
+                        <li><a href="#"
+                                class="hover:text-blue-600 transition">Services</a></li>
+                        <li><a href="#"
+                                class="hover:text-blue-600 transition">Contact</a></li>
+                        <li> <button
+                                onclick="document.documentElement.classList.toggle('dark')"
+                                class="fixed top-4 right-4 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white p-2 rounded-full shadow-md z-50 hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+                                🌙
+                            </button>
+                        </li>
+
+                    </ul>
+                </nav>
+                <div class="w-full md:w-auto">
+                    <input type="search" placeholder="Rechercher..."
+                        class="w-full md:w-60 border border-gray-300 rounded px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+            </div>
+        </header>
+
+        <!-- Image principale -->
+        <!-- Section avec image en fond + texte par-dessus -->
+        <div class="relative w-full h-64">
+            <!-- Image de fond -->
+            <img src="img/cta-bg.jpg" alt="IRLA"
+                class="w-full h-full object-cover rounded" />
+
+            <!-- Overlay sombre (facultatif mais améliore la lisibilité) -->
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+            <!-- Texte superposé -->
+            <div
+                class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+                <h2 class="text-5xl font-bold text-white mb-2">
+                    Institut de Recherche en Langues Africaines (IRLA)
+                </h2>
+            </div>
+        </div>
+
+        <!-- Main -->
+        <main class="max-w-7xl mx-auto px-4 py-16 fade-in-up space-y-20">
+
+            <!-- Mot du Directeur -->
+            <section class="bg-blue-50 py-16 px-4">
+                <div
+                    class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center rounded-xl shadow p-8 hover:shadow-lg transition duration-300">
+
+                    <!-- Photo du Directeur -->
+                    <div class="flex justify-center">
+                        <img src="img/dg.jpg"
+                            alt="Directeur Général"
+                            class="rounded-xl w-72 h-72 object-cover shadow-md">
+                    </div>
+
+                    <!-- Message du Directeur -->
+                    <div>
+                        <h3 class="text-3xl font-bold text-blue-700 mb-4">Mot du
+                            Directeur Général</h3>
+                        <p
+                            class="text-base leading-relaxed text-gray-700 space-y-3">
+                            Chers internautes,<br><br>
+                            Bienvenue sur notre site officiel. L’Institut de
+                            Recherche en Langues Africaines (IRLA) œuvre pour la
+                            promotion, la valorisation et l’enseignement des
+                            langues nationales guinéennes.<br><br>
+                            Notre ambition est d’ancrer ces langues dans le
+                            quotidien, l’éducation et la recherche,
+                            afin de préserver notre patrimoine culturel
+                            immatériel.<br><br>
+                            Découvrez sur cette plateforme la richesse de notre
+                            production linguistique, les initiatives du
+                            personnel
+                            et les événements à venir.<br><br>
+                            <strong class="block mt-4">Dr Mohamed Bintou
+                                KEITA<br>Directeur Général</strong>
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Section Nos Membres -->
+            <section class="bg-white py-16 px-4">
+                <div class="max-w-7xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-4">Nos
+                        membres</h2>
+                    <p class="text-gray-600 mb-12">Découvrez les personnes qui
+                        font vivre notre organisation avec passion et
+                        engagement.</p>
+
+                    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                        <!-- Carte membre -->
+                        <div
+                            class="bg-white shadow-md rounded-2xl overflow-hidden p-6 text-center hover:shadow-lg transition duration-300">
+                            <img src="img/person1.jpg"
+                                alt="Membre 1"
+                                class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                            <h3 class="text-xl font-semibold text-blue-900">Dr.
+                                Fatou Koné</h3>
+                            <p class="text-gray-500 mb-4">Présidente</p>
+                            <div
+                                class="flex justify-center space-x-4 text-blue-900">
+                                <a href="#" aria-label="Facebook"
+                                    class="hover:text-blue-600"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Twitter"
+                                    class="hover:text-blue-600"><i
+                                        class="fab fa-x-twitter"></i></a>
+                                <a href="#" aria-label="LinkedIn"
+                                    class="hover:text-blue-600"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Autres membres (duplique la carte ci-dessus pour chaque membre) -->
+                        <div
+                            class="bg-white shadow-md rounded-2xl overflow-hidden p-6 text-center hover:shadow-lg transition duration-300">
+                            <img src="img/person2.jpg"
+                                alt="Membre 2"
+                                class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                            <h3
+                                class="text-xl font-semibold text-blue-900">Prof.
+                                Issa Coulibaly</h3>
+                            <p class="text-gray-500 mb-4">Vice-Président</p>
+                            <div
+                                class="flex justify-center space-x-4 text-blue-900">
+                                <a href="#" class="hover:text-blue-600"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="hover:text-blue-600"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="#" class="hover:text-blue-600"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white shadow-md rounded-2xl overflow-hidden p-6 text-center hover:shadow-lg transition duration-300">
+                            <img src="img/person3.jpg"
+                                alt="Membre 3"
+                                class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                            <h3 class="text-xl font-semibold text-blue-900">Awa
+                                Diabaté</h3>
+                            <p class="text-gray-500 mb-4">Secrétaire
+                                Générale</p>
+                            <div
+                                class="flex justify-center space-x-4 text-blue-900">
+                                <a href="#" class="hover:text-blue-600"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="hover:text-blue-600"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a href="#" class="hover:text-blue-600"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Membre 4 -->
+                        <div
+                            class="bg-white shadow-md rounded-2xl overflow-hidden p-6 text-center hover:shadow-lg transition duration-300">
+                            <img src="img/person4.jpg"
+                                alt="Membre 4"
+                                class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                            <h3 class="text-xl font-semibold text-blue-900">Dr.
+                                Mamadou Diallo</h3>
+                            <p class="text-gray-500 mb-4">Responsable de la
+                                Recherche</p>
+                            <div
+                                class="flex justify-center space-x-4 text-blue-900">
+                                <a href="#" class="hover:text-blue-600"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="hover:text-blue-600"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a href="#" class="hover:text-blue-600"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Membre 5 -->
+                        <div
+                            class="bg-white shadow-md rounded-2xl overflow-hidden p-6 text-center hover:shadow-lg transition duration-300">
+                            <img src="img/person5.jpg"
+                                alt="Membre 5"
+                                class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                            <h3
+                                class="text-xl font-semibold text-blue-900">Fatimata
+                                Camara</h3>
+                            <p class="text-gray-500 mb-4">Chargée de
+                                Communication</p>
+                            <div
+                                class="flex justify-center space-x-4 text-blue-900">
+                                <a href="#" class="hover:text-blue-600"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="hover:text-blue-600"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="#" class="hover:text-blue-600"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Membre 6 -->
+                        <div
+                            class="bg-white shadow-md rounded-2xl overflow-hidden p-6 text-center hover:shadow-lg transition duration-300">
+                            <img src="img/person6.jpg"
+                                alt="Membre 6"
+                                class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                            <h3
+                                class="text-xl font-semibold text-blue-900">Prof.
+                                Ousmane Bangoura</h3>
+                            <p class="text-gray-500 mb-4">Conseiller
+                                Scientifique</p>
+                            <div
+                                class="flex justify-center space-x-4 text-blue-900">
+                                <a href="#" class="hover:text-blue-600"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="hover:text-blue-600"><i
+                                        class="fab fa-x-twitter"></i></a>
+                                <a href="#" class="hover:text-blue-600"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Tu peux continuer à ajouter d'autres membres ici -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Nos Actualités -->
+            <section class="space-y-10">
+                <h2
+                    class="text-3xl font-bold text-blue-800 text-center fade-in-up">Nos
+                    Actualités</h2>
+
+                <div
+                    class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 fade-in-up">
+                    <!-- Actualité 1 -->
+                    <div
+                        class="bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src="img/actu1.jpeg" alt="Concours linguistique"
+                            class="w-full h-48 object-cover" />
+                        <div class="p-4 space-y-2">
+                            <h3
+                                class="text-xl font-semibold text-blue-700">Concours
+                                linguistique national</h3>
+                            <p class="text-sm text-gray-700">Le ministère lance
+                                un concours national visant à promouvoir
+                                l’écriture en langues locales...</p>
+                            <a href="#"
+                                class="text-blue-600 text-sm hover:underline">Lire
+                                la suite</a>
+                        </div>
+                    </div>
+
+                    <!-- Actualité 2 -->
+                    <div
+                        class="bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src="img/actu2.jpeg" alt="Semaine culturelle"
+                            class="w-full h-48 object-cover" />
+                        <div class="p-4 space-y-2">
+                            <h3
+                                class="text-xl font-semibold text-blue-700">Semaine
+                                culturelle des langues</h3>
+                            <p class="text-sm text-gray-700">Des experts et
+                                chercheurs partagent leurs travaux pour
+                                valoriser nos langues...</p>
+                            <a href="#"
+                                class="text-blue-600 text-sm hover:underline">Lire
+                                la suite</a>
+                        </div>
+                    </div>
+
+                    <!-- Actualité 3 -->
+                    <div
+                        class="bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src="img/actu3.jpg" alt="Atelier formation"
+                            class="w-full h-48 object-cover" />
+                        <div class="p-4 space-y-2">
+                            <h3
+                                class="text-xl font-semibold text-blue-700">Atelier
+                                de formation des enseignants</h3>
+                            <p class="text-sm text-gray-700">Les enseignants des
+                                écoles primaires formés sur les manuels en
+                                langues nationales...</p>
+                            <a href="#"
+                                class="text-blue-600 text-sm hover:underline">Lire
+                                la suite</a>
+                        </div>
+                    </div>
+
+                    <!-- Actualité 4 -->
+                    <div
+                        class="bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src="img/actu4.jpeg" alt="Numérisation"
+                            class="w-full h-48 object-cover" />
+                        <div class="p-4 space-y-2">
+                            <h3
+                                class="text-xl font-semibold text-blue-700">Numérisation
+                                des ouvrages IRLA</h3>
+                            <p class="text-sm text-gray-700">Une bibliothèque en
+                                ligne voit le jour pour faciliter l’accès aux
+                                ressources linguistiques...</p>
+                            <a href="#"
+                                class="text-blue-600 text-sm hover:underline">Lire
+                                la suite</a>
+                        </div>
+                    </div>
+
+                    <!-- Actualité 5 -->
+                    <div
+                        class="bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src="img/actu5.jpg" alt="Partenariat UNESCO"
+                            class="w-full h-48 object-cover" />
+                        <div class="p-4 space-y-2">
+                            <h3
+                                class="text-xl font-semibold text-blue-700">Partenariat
+                                avec l’UNESCO</h3>
+                            <p class="text-sm text-gray-700">L’IRLA signe un
+                                accord avec l’UNESCO pour la sauvegarde des
+                                langues en voie de disparition...</p>
+                            <a href="#"
+                                class="text-blue-600 text-sm hover:underline">Lire
+                                la suite</a>
+                        </div>
+                    </div>
+
+                    <!-- Actualité 6 -->
+                    <div
+                        class="bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src="img/actu6.jpg" alt="Visite diplomatique"
+                            class="w-full h-48 object-cover" />
+                        <div class="p-4 space-y-2">
+                            <h3
+                                class="text-xl font-semibold text-blue-700">Visite
+                                d'une délégation africaine</h3>
+                            <p class="text-sm text-gray-700">Une délégation de
+                                chercheurs africains en visite d’échange à
+                                l’Institut IRLA...</p>
+                            <a href="#"
+                                class="text-blue-600 text-sm hover:underline">Lire
+                                la suite</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Nos Services -->
+            <section class="bg-gray-100 py-16 px-4" id="services">
+                <div class="max-w-7xl mx-auto text-center mb-12">
+                    <h2 class="text-4xl font-bold text-blue-700 mb-4">Nos
+                        Services</h2>
+                    <p class="text-gray-600">Découvrez les principaux axes de
+                        notre engagement linguistique et scientifique.</p>
+                </div>
+
+                <div
+                    class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+
+                    <!-- Formation -->
+                    <div
+                        class="bg-white rounded-xl shadow hover:shadow-lg transition p-6">
+                        <h3
+                            class="text-2xl font-semibold text-blue-600 mb-2">Formations</h3>
+                        <p class="text-gray-700 mb-4">
+                            À travers le français et l’anglais comme supports,
+                            nos experts, formatrices et formateurs, vous
+                            donneront
+                            le goût de la découverte et de l’apprentissage des
+                            richesses de nos langues.
+                        </p>
+                        <a href="#"
+                            class="text-blue-600 font-medium hover:underline">En
+                            savoir plus →</a>
+                    </div>
+
+                    <!-- Traduction -->
+                    <div
+                        class="bg-white rounded-xl shadow hover:shadow-lg transition p-6">
+                        <h3
+                            class="text-2xl font-semibold text-blue-600 mb-2">Traduction</h3>
+                        <p class="text-gray-700 mb-4">
+                            Experts dans la traduction de contenu, nous brisons
+                            la barrière des langues nationales guinéennes
+                            notamment
+                            kisiei, maninkakan, pular, kpɛlɛ, soso, loma, onéyan
+                            et wamey pour vous livrer du contenu de qualité.
+                        </p>
+                        <a href="#"
+                            class="text-blue-600 font-medium hover:underline">En
+                            savoir plus →</a>
+                    </div>
+
+                    <!-- Recherche -->
+                    <div
+                        class="bg-white rounded-xl shadow hover:shadow-lg transition p-6">
+                        <h3
+                            class="text-2xl font-semibold text-blue-600 mb-2">Recherche</h3>
+                        <p class="text-gray-700 mb-4">
+                            Mener des études sur le phénomène de contact des
+                            langues, les comportements sociolinguistiques et
+                            psycholinguistiques des locuteurs dans un contexte
+                            multilingue évalué et validé par L’Académie des
+                            Langues de l’IRLA.
+                        </p>
+                        <a href="#"
+                            class="text-blue-600 font-medium hover:underline">En
+                            savoir plus →</a>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Galerie -->
+            <section class="bg-gray-100 py-16">
+                <div class="container mx-auto px-4">
+                    <h2
+                        class="text-3xl font-bold text-blue-900 mb-8 text-center">Notre
+                        Galerie</h2>
+
+                    <div x-data="{ activeSlide: 0, slides: 5 }"
+                        x-init="setInterval(() => activeSlide = (activeSlide + 1) % slides, 3000)"
+                        class="relative overflow-hidden">
+
+                        <!-- Slides -->
+                        <div
+                            class="flex transition-transform duration-700 ease-in-out"
+                            :style="`transform: translateX(-${activeSlide * 100}%);`">
+                            <!-- Slide 1 -->
+                            <div class="w-full flex-shrink-0 px-2">
+                                <img src="img/img1.jpeg" alt="Galerie IRLA"
+                                    class="rounded-xl shadow-lg w-full h-64 object-cover">
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="w-full flex-shrink-0 px-2">
+                                <img src="img/img2.jpg" alt="Galerie IRLA"
+                                    class="rounded-xl shadow-lg w-full h-64 object-cover">
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="w-full flex-shrink-0 px-2">
+                                <img src="img/img3.jpg" alt="Galerie IRLA"
+                                    class="rounded-xl shadow-lg w-full h-64 object-cover">
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="w-full flex-shrink-0 px-2">
+                                <img src="img/img4.jpeg" alt="Galerie IRLA"
+                                    class="rounded-xl shadow-lg w-full h-64 object-cover">
+                            </div>
+                            <!-- Slide 5 -->
+                            <div class="w-full flex-shrink-0 px-2">
+                                <img src="img/img5.jpeg" alt="Galerie IRLA"
+                                    class="rounded-xl shadow-lg w-full h-64 object-cover">
+                            </div>
+                        </div>
+
+                        <!-- Dots -->
+                        <div class="flex justify-center mt-6 space-x-2">
+                            <template x-for="i in slides" :key="i">
+                                <button
+                                    class="w-4 h-4 rounded-full"
+                                    :class="{
+              'bg-blue-900': activeSlide === i - 1,
+              'bg-gray-400': activeSlide !== i - 1
+            }"
+                                    @click="activeSlide = i - 1">
+                                </button>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer Modernisé -->
+        <footer class="bg-blue-900 text-white py-10">
+            <div
+                class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
+
+                <!-- IRLA -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">IRLA</h4>
+                    <p class="text-gray-300">Institut de Recherche en Langues
+                        Africaines. Nous œuvrons pour la valorisation des
+                        langues nationales.</p>
+                </div>
+
+                <!-- Liens rapides -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Liens rapides</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#"
+                                class="hover:text-blue-300 transition">Accueil</a></li>
+                        <li><a href="#" class="hover:text-blue-300 transition">À
+                                propos</a></li>
+                        <li><a href="#"
+                                class="hover:text-blue-300 transition">Actualités</a></li>
+                        <li><a href="#"
+                                class="hover:text-blue-300 transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>📞 +225 07 00 00 00 00</li>
+                        <li>✉️ contact@irla.ci</li>
+                        <li>📍 Abidjan, Côte d’Ivoire</li>
+                    </ul>
+                </div>
+
+                <!-- Réseaux sociaux -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Suivez-nous</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-blue-300 transition"
+                            aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="hover:text-blue-300 transition"
+                            aria-label="Twitter">
+                            <i class="fab fa-x-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="hover:text-blue-300 transition"
+                            aria-label="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="hover:text-blue-300 transition"
+                            aria-label="YouTube">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bas du footer -->
+            <div
+                class="border-t border-blue-800 mt-8 pt-4 text-center text-gray-400 text-xs">
+                © 2025 IRLA — Tous droits réservés.
+            </div>
+        </footer>
+
+    </body>
+</html>
