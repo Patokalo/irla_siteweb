@@ -116,25 +116,49 @@
 
         <!-- Image principale -->
         <!-- Section avec image en fond + texte par-dessus -->
-        <div class="relative w-full h-64">
+        <div class="relative w-full h-64 md:h-[460px]">
             <!-- Image de fond -->
-            <img src="img/cta-bg.jpg" alt="IRLA"
-                class="w-full h-full object-cover rounded" />
+            <img src="img/banniere_irla3.png" alt="IRLA"
+                class="w-full h-full object-cover object-center rounded" />
 
-            <!-- Overlay sombre (facultatif mais améliore la lisibilité) -->
+            <!-- Overlay sombre (améliore la lisibilité du texte) -->
             <div class="absolute inset-0 bg-black bg-opacity-50"></div>
 
             <!-- Texte superposé -->
-            <div
+            <!-- <div
                 class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-                <h2 class="text-5xl font-bold text-white mb-2">
-                    Institut de Recherche en Langues Africaines (IRLA)
+                <h2 class="text-3xl md:text-5xl font-bold mb-2">
+                    INSTITUT DE RECHERCHE LINGUISTIQUE APPLIQUÉE (IRLA)
                 </h2>
-            </div>
+            </div> -->
         </div>
 
         <!-- Main -->
         <main class="max-w-7xl mx-auto px-4 py-16 fade-in-up space-y-20">
+
+            <!-- Boutons IRLA avec icônes -->
+            <section class="flex flex-wrap justify-center gap-6">
+                <!-- FORMATION -->
+                <a href="#formation"
+                    class="bg-blue-900 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition duration-300 ease-in-out flex items-center gap-2">
+                    <i class="fa fa-graduation-cap"></i>
+                    FORMATION
+                </a>
+
+                <!-- RECHERCHE -->
+                <a href="#recherche"
+                    class="bg-green-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-green-500 transition duration-300 ease-in-out flex items-center gap-2">
+                    <i class="fa fa-search"></i>
+                    RECHERCHE
+                </a>
+
+                <!-- TRADUCTION -->
+                <a href="#traduction"
+                    class="bg-yellow-500 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-yellow-400 transition duration-300 ease-in-out flex items-center gap-2">
+                    <i class="fa fa-language"></i>
+                    TRADUCTION
+                </a>
+            </section>
 
             <!-- Mot du Directeur -->
             <section class="bg-blue-50 py-16 px-4">
@@ -143,9 +167,9 @@
 
                     <!-- Photo du Directeur -->
                     <div class="flex justify-center">
-                        <img src="img/dg.jpg"
+                        <img src="img/dg_irla.jpg"
                             alt="Directeur Général"
-                            class="rounded-xl w-72 h-72 object-cover shadow-md">
+                            class="rounded-xl w-85 h-85 object-cover shadow-md">
                     </div>
 
                     <!-- Message du Directeur -->
@@ -602,9 +626,9 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Contact</h4>
                     <ul class="space-y-2 text-gray-300">
-                        <li>📞 +225 07 00 00 00 00</li>
+                        <li>📞 +224 660 00 00 00</li>
                         <li>✉️ contact@irla.ci</li>
-                        <li>📍 Abidjan, Côte d’Ivoire</li>
+                        <li>📍 Téminetaye, Guinée Conakry</li>
                     </ul>
                 </div>
 
